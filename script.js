@@ -122,7 +122,7 @@ function creatingElements() {
 
 creatingElements();
 
-// 
+// CURSOR AIM
 
 document.addEventListener('mousemove', e => {
     aimCursor.style.top = (e.clientY - (aimCursor.offsetHeight / 2)) + 'px';
