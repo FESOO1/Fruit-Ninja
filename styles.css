@@ -1,5 +1,6 @@
 html {
     user-select: none;
+    cursor: none;
 }
 
 * {
@@ -19,6 +20,32 @@ body {
     height: 100vh;
 }
 
+/* AIM */
+
+.aim {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 5rem;
+    pointer-events: none;
+    z-index: 999;
+}
+
+.aim::before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    border-radius: 1rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: red;
+}
+
 /* BALL */
 
 .ball {
@@ -26,8 +53,9 @@ body {
     height: 40px;
     border-radius: 5rem;
     position: fixed;
-    animation: 12s ease forwards ball-animation;
     transition: 100ms;
+    background: url(./assets/target.png) no-repeat;
+    background-size: cover;
 }
 
 @keyframes ball-animation {
