@@ -1,11 +1,11 @@
+html {
+    user-select: none;
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
-
-html {
-    user-select: none;
 }
 
 body {
@@ -26,10 +26,36 @@ body {
     height: 40px;
     border-radius: 5rem;
     position: fixed;
-    top: -45px;
     animation: 12s ease forwards ball-animation;
 }
 
 @keyframes ball-animation {
     to{top: calc(100% + 5px);}
-};
+}
+
+/* INFORMATION */
+
+.information {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    column-gap: 20px;
+    background-color: rgb(30,30,30);
+    padding: 5px 10px;
+    border-radius: 0.3rem;
+    border: 1px solid rgba(255,255,255,0.1);
+    pointer-events: none;
+}
+
+.information-divider {
+    border: 0;
+    border-left: 1px solid rgba(255,255,255,0.05);
+}
+
+.level-info,
+.score-info,
+.health-infor {
+    color: white;
+}
